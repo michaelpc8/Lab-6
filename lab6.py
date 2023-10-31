@@ -1,7 +1,31 @@
+#Michael Pierre-Canel
 def encode(password):
     encoded_password = ''.join(str((int(digit) + 3) % 10) for digit in password)
     return encoded_password
+    
+#Giuliana Silva
+def decode(decoded_password):
+    newNumber = ""
+    newDigit = ""
+    for digit in decoded_password:
 
+        if int(digit) >= 3:
+            newDigit = int(digit) - 3
+
+        if int(digit) == 0:
+            newDigit = "7"
+
+        if int(digit) == 1:
+            newDigit = "8"
+
+        if int(digit) == 2:
+            newDigit = "9"
+
+        newNumber += str(newDigit)
+
+    return newNumber
+
+#Michael Pierre-Canel
 def main():
     while True:
         print("Menu")
